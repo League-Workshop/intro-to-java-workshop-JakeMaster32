@@ -1,4 +1,5 @@
-int x = 430,y = 365;
+
+int x = 430, y = 365;
 PImage catPic;
 void setup () {
   noStroke();
@@ -13,8 +14,16 @@ void draw () {
   }
   fill(#FF0A0A);
   ellipse(x, y, 40, 40);
- ellipse(x + 175, y, 40, 40);
+  ellipse(x + 175, y, 40, 40);
 }
 void keyPressed() {
-  x+=5;y+=5;
+  x+=5;
+  y+=5;
+
+
+if (y>height) {
+  background(catPic);
+  x = 430; 
+  y = 365;
+}
 }
